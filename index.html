@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Oracle Fusion</title>
+</head>
+<body>
+  <p style="font-family:sans-serif;text-align:center;margin-top:20vh;color:#555">
+    Redirecting you to Oracle Fusion...
+  </p>
+
+  <script>
+    const ORACLE_WEB_URL = "https://sc-iaeykf.fa.ocs.oraclecloud.com";
+    const PLAY_STORE_URL = "https://play.google.com/store/apps/details?id=com.oracle.cloud.hcm.mobile&hl=en";
+    const APP_STORE_URL  = "https://apps.apple.com/us/app/oracle-fusion-applications/id1361813677";
+
+    const ua = navigator.userAgent || navigator.vendor || window.opera;
+
+    if (/android/i.test(ua)) {
+      window.location.href = PLAY_STORE_URL;
+    } else if (/iPad|iPhone|iPod/.test(ua) && !window.MSStream) {
+      window.location.href = APP_STORE_URL;
+    } else {
+      window.location.href = ORACLE_WEB_URL;
+    }
+  </script>
+</body>
+</html>
